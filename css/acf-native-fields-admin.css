@@ -1,0 +1,4 @@
+/* Hide name for native fields */
+.acf-field-object-native-field tr[data-name="name"], .acf-field-object-native-field tr[data-name="required"] {
+	display: none!important;
+}
