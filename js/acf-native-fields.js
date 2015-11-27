@@ -138,6 +138,13 @@
 		moveNativeField_format: function() {
 			return ACF_Native_Fields.getNativeFieldElement('#formatdiv');
 		},
+
+		/**
+		 * ACF Native Field type: WordPress page attributes meta box
+		 */
+		moveNativeField_page_attributes: function() {
+			return ACF_Native_Fields.getNativeFieldElement('#pageparentdiv');
+		},
 	};
 
 	$(document).ready(ACF_Native_Fields.init);

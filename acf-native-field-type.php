@@ -37,6 +37,7 @@ class acf_field_native extends acf_field {
 				'discussion'	 => __('Discussion', 'acf-native-field'),
 				'trackbacks'	 => __('Trackbacks', 'acf-native-field'),
 				'format'		 => __('Format', 'acf-native-field'),
+				'page_attributes'=> __('Page Attributes', 'acf-native-field'),
 			),
 		));
 	}
