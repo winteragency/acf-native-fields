@@ -14,7 +14,7 @@ class acf_field_native extends acf_field {
 		$this->category = 'layout';
 		
 		$this->l10n = array(
-			'not_implemented' => __('Native Field not implemented yet.', 'acf-native-field'),
+			'not_implemented' => __('Native Field not implemented yet.', 'acf-native-fields'),
 		);
 
     	parent::__construct();
@@ -22,29 +22,29 @@ class acf_field_native extends acf_field {
 	
 	function render_field_settings($field) {
 		acf_render_field_setting($field, array(
-			'label'			=> __('Native Field', 'acf-native-field'),
-			'instructions'	=> __('The native WordPress field to move into this placeholder.', 'acf-native-field'),
+			'label'			=> __('Native Field', 'acf-native-fields'),
+			'instructions'	=> __('The native WordPress field to move into this placeholder.', 'acf-native-fields'),
 			'type'			=> 'select',
 			'name'			=> 'native_field',
 			// TODO: Implement backend and frontend functionality for custom native fields (hooks)
 			'choices'		=> array(
-				'content'		 => __('Content Editor', 'acf-native-field'),
-				'excerpt'		 => __('Excerpt', 'acf-native-field'),
-				'featured_image' => __('Featured Image', 'acf-native-field'),
-				'yoast_seo'		 => __('Yoast SEO', 'acf-native-field'),
-				'publish_box'	 => __('Publish Box', 'acf-native-field'),
-				'permalink'	 	 => __('Permalink', 'acf-native-field'),
-				'discussion'	 => __('Discussion', 'acf-native-field'),
-				'trackbacks'	 => __('Trackbacks', 'acf-native-field'),
-				'format'		 => __('Format', 'acf-native-field'),
-				'page_attributes'=> __('Page Attributes', 'acf-native-field'),
+				'content'		 => __('Content Editor', 'acf-native-fields'),
+				'excerpt'		 => __('Excerpt', 'acf-native-fields'),
+				'featured_image' => __('Featured Image', 'acf-native-fields'),
+				'yoast_seo'		 => __('Yoast SEO', 'acf-native-fields'),
+				'publish_box'	 => __('Publish Box', 'acf-native-fields'),
+				'permalink'	 	 => __('Permalink', 'acf-native-fields'),
+				'discussion'	 => __('Discussion', 'acf-native-fields'),
+				'trackbacks'	 => __('Trackbacks', 'acf-native-fields'),
+				'format'		 => __('Format', 'acf-native-fields'),
+				'page_attributes'=> __('Page Attributes', 'acf-native-fields'),
 			),
 		));
 	}
 	
 	function render_field($field) {?>
 		<div class="acf-native-field" data-native-field="<?php echo $field['native_field']; ?>">
-			<?php _e('Loading...', 'acf-native-field'); ?>
+			<?php _e('Loading...', 'acf-native-fields'); ?>
 		</div><?php
 	}
 	
