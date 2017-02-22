@@ -19,3 +19,8 @@
 	border: none;
 	background: none;
 }
+
+/* Hide postbox header */
+.acf-native-field h2 {
+	display: none;
+}
