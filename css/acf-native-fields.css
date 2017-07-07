@@ -9,6 +9,11 @@
 	margin-top: -20px;
 }
 
+/* Hide default excerpt description */
+.acf-native-field #postexcerpt p {
+	display: none;
+}
+
 .acf-native-field  #wp-content-editor-tools  {
 	border: none;
 	background: none;
