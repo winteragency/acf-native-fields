@@ -63,7 +63,7 @@
 
 			// First try to find a built-in method to run for this type of native field
 			if(typeof ACF_Native_Fields['moveNativeField_' + native_field_type] === 'function') {
-				native_field_placeholder.append(ACF_Native_Fields['moveNativeField_' + native_field_type]());
+				native_field_placeholder.append(ACF_Native_Fields['moveNativeField_' + native_field_type](native_field_placeholder));
 				// TODO: Allow custom callback code to be added in field group settings and executed here?
 			}
 			// If none exists, see if a custom one has been passed, and exists
@@ -144,6 +144,13 @@
 		 */
 		moveNativeField_page_attributes: function() {
 			return ACF_Native_Fields.getNativeFieldElement('#pageparentdiv');
+		},
+
+		/**
+		 * ACF Native Field type: custom
+		 */
+		moveNativeField_custom: function (native_field_placeholder) {
+			return ACF_Native_Fields.getNativeFieldElement('#' + native_field_placeholder.data('metabox-id'));
 		},
 	};
 
