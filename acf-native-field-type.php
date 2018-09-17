@@ -49,7 +49,6 @@ class acf_field_native extends acf_field {
 			'type'				=> 'text',
 			'name'				=> 'metabox_id',
 			'prefix'			=> '#',
-			'required'			=> 1,
 			'conditional_logic' => array(
 				array(
 					array(
