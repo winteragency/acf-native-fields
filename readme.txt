@@ -1,9 +1,8 @@
 === ACF Native Fields ===
 Contributors: marcusforsberg
 Tags: acf, advanced custom fields, metabox, metaboxes, meta, custom fields, meta data
-Donate link: https://forsberg.ax
-Requires at least: 4.3.1
-Tested up to: 4.3.1
+Requires at least: 4.9.8
+Tested up to: 4.9.8
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl.html
 

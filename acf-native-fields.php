@@ -1,11 +1,11 @@
 <?php
 /*
 Plugin Name: ACF Native Fields
-Plugin URI: https://github.com/marcusforsberg/acf-native-fields
+Plugin URI: https://github.com/winteragency/acf-native-fields
 Description: An interface to move native WordPress fields and options into ACF for a cleaner editor layout
-Version: 1.0.0
-Author: Marcus Forsberg
-Author URI: https://forsberg.ax
+Version: 1.1.0
+Author: Winter
+Author URI: https://winteragency.se
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.en.html
 */
