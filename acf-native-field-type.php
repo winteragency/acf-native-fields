@@ -32,7 +32,7 @@ class acf_field_native extends acf_field {
 				'content'		  => __('Content Editor', 'acf-native-fields'),
 				'excerpt'		  => __('Excerpt', 'acf-native-fields'),
 				'featured_image'  => __('Featured Image', 'acf-native-fields'),
-				'yoast_seo'		  => __('Yoast SEO', 'acf-native-fields'),
+				'yoast_seo'		  => __('SEO (Yoast or SEO framework)', 'acf-native-fields'),
 				'publish_box'	  => __('Publish Box', 'acf-native-fields'),
 				'permalink'	 	  => __('Permalink', 'acf-native-fields'),
 				'discussion'	  => __('Discussion', 'acf-native-fields'),

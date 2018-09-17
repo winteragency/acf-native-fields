@@ -98,10 +98,10 @@
 		},
 
 		/**
-		 * ACF Native Field type: Yoast SEO meta box
+		 * ACF Native Field type: SEO meta box (Yoast or SEO framework)
 		 */
 		moveNativeField_yoast_seo: function() {
-			return ACF_Native_Fields.getNativeFieldElement('#wpseo_meta');
+			return ACF_Native_Fields.getNativeFieldElement('#wpseo_meta, #tsf-inpost-box');
 		},
 
 		/**
