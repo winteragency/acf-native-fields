@@ -2,7 +2,7 @@
     "name": "marcusforsberg/acf-native-fields",
     "description": "An interface to move native WordPress fields and options into ACF for a cleaner editor layout",
 	"type": "wordpress-plugin",
-    "license": "GPLv2",
+    "license": "GPL-2.0+",
     "authors": [
         {
             "name": "Marcus Forsberg",
