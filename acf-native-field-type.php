@@ -52,11 +52,10 @@ class acf_field_native extends acf_field {
 		acf_render_field_setting(
 			$field,
 			array(
-				'label'             => __( 'Custom Meta Box ID', 'acf-native-fields' ),
-				'instructions'      => __( 'The ID of the custom metabox to target.', 'acf-native-fields' ),
+				'label'             => __( 'Custom Meta Box', 'acf-native-fields' ),
+				'instructions'      => __( 'A valid CSS selector to target your desired meta box.', 'acf-native-fields' ),
 				'type'              => 'text',
 				'name'              => 'metabox_id',
-				'prefix'            => '#',
 				'conditional_logic' => array(
 					array(
 						array(

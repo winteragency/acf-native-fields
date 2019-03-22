@@ -9,7 +9,7 @@
 		init: function() {
 			ACF_Native_Fields.editor_container = $('#post-body');
 			ACF_Native_Fields.native_fields = ACF_Native_Fields.editor_container.find('.acf-native-field');
-			
+
 			// Move all native fields into their placeholders
 			ACF_Native_Fields.moveNativeFields();
 		},
@@ -150,7 +150,7 @@
 		 * ACF Native Field type: custom
 		 */
 		moveNativeField_custom: function (native_field_placeholder) {
-			return ACF_Native_Fields.getNativeFieldElement('#' + native_field_placeholder.data('metabox-id'));
+			return ACF_Native_Fields.getNativeFieldElement(native_field_placeholder.data('metabox-id'));
 		},
 	};
 
