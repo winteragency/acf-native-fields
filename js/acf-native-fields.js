@@ -9,7 +9,7 @@
 		init: function() {
 			ACF_Native_Fields.editor_container = $('#post-body');
 			ACF_Native_Fields.native_fields = ACF_Native_Fields.editor_container.find('.acf-native-field');
-			
+
 			// Move all native fields into their placeholders
 			ACF_Native_Fields.moveNativeFields();
 		},
@@ -60,10 +60,50 @@
 		moveNativeField: function() {
 			var native_field_placeholder = $(this).empty();
 			var native_field_type = native_field_placeholder.data('native-field');
+			var native_fields = {
+				// Core
+				content: '#postdivrich',
+				excerpt: '#postexcerpt',
+				publish_box: '#submitdiv',
+				page_attributes: '#pageparentdiv',
+				featured_image: '#postimagediv',
+
+				permalink: '#slugdiv',
+				author: '#authordiv',
+
+				categories: '#categorydiv',
+				tags: '#tagsdiv-post_tag',
+				format: '#formatdiv',
+
+				revisions: '#revisionsdiv',
+				comments: '#commentsdiv',
+				discussion: '#commentstatusdiv',
+				trackbacks: '#trackbacksdiv',
+
+				// WooCommerce
+				all: '#product_catdiv, #tagsdiv-product_tag, #postimagediv, #woocommerce-product-images, #woocommerce-product-data, #postexcerpt, #commentsdiv',
+				product_categories: '#product_catdiv',
+				product_tags: '#tagsdiv-product_tag',
+				product_image: '#postimagediv', // Core Duplicate
+				product_gallery: '#woocommerce-product-images',
+				product_data: '#woocommerce-product-data',
+				product_short_description: '#postexcerpt', // Core Duplicate
+				reviews: '#commentsdiv', // Core Duplicate
+
+				// Plugins
+				yoast_seo: '#wpseo_meta',
+				seo_framework: '#tsf-inpost-box',
+				classic_editor: '#classic-editor-switch-editor',
+				laygridder: '#gridder, #gridder-modals',
+
+				// Custom
+				custom: native_field_placeholder.data('metabox-id'),
+			}
 
 			// First try to find a built-in method to run for this type of native field
-			if(typeof ACF_Native_Fields['moveNativeField_' + native_field_type] === 'function') {
-				native_field_placeholder.append(ACF_Native_Fields['moveNativeField_' + native_field_type](native_field_placeholder));
+			if(native_fields[native_field_type]) {
+				var native_field = ACF_Native_Fields.getNativeFieldElement(native_fields[native_field_type]);
+				native_field_placeholder.append(native_field);
 				// TODO: Allow custom callback code to be added in field group settings and executed here?
 			}
 			// If none exists, see if a custom one has been passed, and exists
@@ -74,83 +114,6 @@
 			else {
 				native_field_placeholder.html(acf._e('native_field', 'not_implemented'));
 			}
-		},
-
-		/**
-		 * ACF Native Field type: WordPress content editor
-		 */
-		moveNativeField_content: function() {
-			return ACF_Native_Fields.getNativeFieldElement('#postdivrich');
-		},
-
-		/**
-		 * ACF Native Field type: WordPress excerpt editor
-		 */
-		moveNativeField_excerpt: function() {
-			return ACF_Native_Fields.getNativeFieldElement('#postexcerpt');
-		},
-
-		/**
-		 * ACF Native Field type: WordPress featured image
-		 */
-		moveNativeField_featured_image: function() {
-			return ACF_Native_Fields.getNativeFieldElement('#postimagediv');
-		},
-
-		/**
-		 * ACF Native Field type: SEO meta box (Yoast or SEO framework)
-		 */
-		moveNativeField_yoast_seo: function() {
-			return ACF_Native_Fields.getNativeFieldElement('#wpseo_meta, #tsf-inpost-box');
-		},
-
-		/**
-		 * ACF Native Field type: WordPress publish meta box
-		 */
-		moveNativeField_publish_box: function() {
-			return ACF_Native_Fields.getNativeFieldElement('#submitdiv');
-		},
-
-		/**
-		 * ACF Native Field type: WordPress permalink meta box
-		 */
-		moveNativeField_permalink: function() {
-			return ACF_Native_Fields.getNativeFieldElement('#slugdiv');
-		},
-
-		/**
-		 * ACF Native Field type: WordPress discussion settings meta box
-		 */
-		moveNativeField_discussion: function() {
-			return ACF_Native_Fields.getNativeFieldElement('#commentstatusdiv');
-		},
-
-		/**
-		 * ACF Native Field type: WordPress trackback settings meta box
-		 */
-		moveNativeField_trackbacks: function() {
-			return ACF_Native_Fields.getNativeFieldElement('#trackbacksdiv');
-		},
-
-		/**
-		 * ACF Native Field type: WordPress post format meta box
-		 */
-		moveNativeField_format: function() {
-			return ACF_Native_Fields.getNativeFieldElement('#formatdiv');
-		},
-
-		/**
-		 * ACF Native Field type: WordPress page attributes meta box
-		 */
-		moveNativeField_page_attributes: function() {
-			return ACF_Native_Fields.getNativeFieldElement('#pageparentdiv');
-		},
-
-		/**
-		 * ACF Native Field type: custom
-		 */
-		moveNativeField_custom: function (native_field_placeholder) {
-			return ACF_Native_Fields.getNativeFieldElement('#' + native_field_placeholder.data('metabox-id'));
 		},
 	};
 
