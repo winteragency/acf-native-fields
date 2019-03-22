@@ -34,17 +34,49 @@ class acf_field_native extends acf_field {
 				'required'     => 1,
 				// TODO: Implement backend and frontend functionality for custom native fields (hooks)
 				'choices'      => array(
-					'content'         => __( 'Content Editor', 'acf-native-fields' ),
-					'excerpt'         => __( 'Excerpt', 'acf-native-fields' ),
-					'featured_image'  => __( 'Featured Image', 'acf-native-fields' ),
-					'yoast_seo'       => __( 'SEO (Yoast or SEO framework)', 'acf-native-fields' ),
-					'publish_box'     => __( 'Publish Box', 'acf-native-fields' ),
-					'permalink'       => __( 'Permalink', 'acf-native-fields' ),
-					'discussion'      => __( 'Discussion', 'acf-native-fields' ),
-					'trackbacks'      => __( 'Trackbacks', 'acf-native-fields' ),
-					'format'          => __( 'Format', 'acf-native-fields' ),
-					'page_attributes' => __( 'Page Attributes', 'acf-native-fields' ),
-					'custom'          => __( 'Custom', 'acf-native-fields' ),
+					'Core'        => array(
+						'content'         => __( 'Content Editor', 'acf-native-fields' ),
+						'excerpt'         => __( 'Excerpt', 'acf-native-fields' ),
+						'publish_box'     => __( 'Publish Box', 'acf-native-fields' ),
+						'page_attributes' => __( 'Page Attributes', 'acf-native-fields' ),
+						'featured_image'  => __( 'Featured Image', 'acf-native-fields' ),
+
+						'permalink'       => __( 'Permalink', 'acf-native-fields' ),
+						'author'          => __( 'Author', 'acf-native-fields' ),
+
+						'categories'      => __( 'Categories', 'acf-native-fields' ),
+						'tags'            => __( 'Tags', 'acf-native-fields' ),
+						'format'          => __( 'Format', 'acf-native-fields' ),
+
+						'revisions'       => __( 'Revisions', 'acf-native-fields' ),
+						'comments'        => __( 'Comments', 'acf-native-fields' ),
+						'discussion'      => __( 'Discussion', 'acf-native-fields' ),
+						'trackbacks'      => __( 'Trackbacks', 'acf-native-fields' ),
+					),
+
+					'WooCommerce' => array(
+						// TODO: Check if installed
+						'all'                       => __( 'All', 'acf-native-fields' ),
+						'product_categories'        => __( 'Product Categories', 'acf-native-fields' ),
+						'product_tags'              => __( 'Product Tags', 'acf-native-fields' ),
+						'product_image'             => __( 'Product Image', 'acf-native-fields' ),
+						'product_gallery'           => __( 'Product Gallery', 'acf-native-fields' ),
+						'product_data'              => __( 'Product Data', 'acf-native-fields' ),
+						'product_short_description' => __( 'Product Short Description', 'acf-native-fields' ),
+						'reviews'                   => __( 'Reviews', 'acf-native-fields' ),
+					),
+
+					'Plugins'     => array(
+						// TODO: Check if plugins are installed
+						'yoast_seo'      => __( 'Yoast SEO', 'acf-native-fields' ),
+						'seo_framework'  => __( 'SEO Framework', 'acf-native-fields' ),
+						'classic_editor' => __( 'Classic Editor (Editor Switcher)', 'acf-native-fields' ),
+						'laygridder'     => __( 'LayGridder', 'acf-native-fields' ),
+					),
+
+					'Other'       => array(
+						'custom' => __( 'Custom', 'acf-native-fields' ),
+					),
 				),
 			)
 		);
