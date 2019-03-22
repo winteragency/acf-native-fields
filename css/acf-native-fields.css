@@ -1,31 +1,31 @@
 /* Remove styling from postboxes (new class added to them with JS) */
-.native-field-postbox  .inside {
-	margin: 0;
-	padding: 0;
+.native-field-postbox .inside {
+  margin: 0;
+  padding: 0;
 }
 
-/* Remove styling from WYSIWYG editor*/
-.acf-native-field .wp-editor-wrap  {
-	margin-top: -20px;
+/* Remove styling from WYSIWYG editor */
+.acf-native-field .wp-editor-wrap {
+  margin-top: -20px;
 }
 
 /* Hide default excerpt description */
 .acf-native-field #postexcerpt p {
-	display: none;
+  display: none;
 }
 
-.acf-native-field  #wp-content-editor-tools  {
-	border: none;
-	background: none;
+.acf-native-field #wp-content-editor-tools {
+  border: none;
+  background: none;
 }
 
 /* Remove styling from publishing actions */
 .acf-native-field #major-publishing-actions {
-	border: none;
-	background: none;
+  border: none;
+  background: none;
 }
 
 /* Hide postbox header */
 .acf-native-field h2 {
-	display: none;
+  display: none;
 }

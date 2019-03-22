@@ -7,9 +7,11 @@
 		 * Initialize the ACF Native Fields plugin
 		 */
 		init: function() {
-			ACF_Native_Fields.editor_container = $('#post-body');
-			ACF_Native_Fields.native_fields = ACF_Native_Fields.editor_container.find('.acf-native-field');
-			
+			var isGutenberg = document.body.classList.contains( 'block-editor-page' );
+
+			ACF_Native_Fields.editor_container = isGutenberg ? $('#post-body, #metaboxes') : $('#post-body');
+			ACF_Native_Fields.native_fields = isGutenberg ? $('.acf-native-field') : ACF_Native_Fields.editor_container.find('.acf-native-field');
+
 			// Move all native fields into their placeholders
 			ACF_Native_Fields.moveNativeFields();
 		},
