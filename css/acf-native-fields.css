@@ -31,3 +31,9 @@
 .acf-native-field .postbox-header {
   display: none;
 }
+
+/* Set max width for featured image */
+.acf-native-field #postimagediv .inside img {
+  max-width: 150px;
+  width: 100%;
+}
