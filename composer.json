@@ -12,8 +12,5 @@
       "name": "Marcus Forsberg",
       "email": "marcus@winter.ax"
     }
-  ],
-  "require": {
-    "composer/installers": "^1.0"
-  }
+  ]
 }
