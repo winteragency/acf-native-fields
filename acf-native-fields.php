@@ -1,14 +1,29 @@
 <?php
-/*
-Plugin Name: ACF Native Fields
-Plugin URI: https://github.com/winteragency/acf-native-fields
-Description: An interface to move native WordPress fields and options into ACF for a cleaner editor layout
-Version: 1.1.2
-Author: Winter
-Author URI: https://winteragency.se
-License: GPLv3
-License URI: http://www.gnu.org/licenses/gpl-3.0.en.html
-*/
+/**
+ * ACF Native Fields by Winter ❄
+ *
+ * @link              https://github.com/winteragency/wntr-acf-flexible-content-preview
+ * @since             1.0.0
+ * @package           ACF_Native_Fields
+ *
+ * x-release-please-start-version
+ *
+ * @wordpress-plugin
+ * Plugin Name:       ACF Native Fields
+ * Plugin URI:        https://github.com/winteragency/acf-native-fields
+ * Description:       An interface to move native WordPress fields and options into ACF for a cleaner editor layout
+ * Version:           1.1.2
+ * Requires at least: 6.0
+ * Requires PHP:      8.0
+ * Author:            Winter Agency
+ * Author URI:        http://winteragency.se
+ * License:           GPL-3.0+
+ * License URI:       http://www.gnu.org/licenses/gpl-3.0.txt
+ * Text Domain:       acf-native-fields
+ * Domain Path:       /languages
+ *
+ * x-release-please-end
+ */
 
 if (!defined('ABSPATH')) {
   exit();
@@ -16,7 +31,7 @@ if (!defined('ABSPATH')) {
 
 class ACF_Native_Fields {
   static $instance = false;
-  public $version = '1.1.2';
+  public $version = '1.1.2'; // x-release-please-version
 
   function __construct() {
     // Init plugin (check requirements etc)
