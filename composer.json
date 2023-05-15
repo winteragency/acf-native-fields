@@ -1,19 +1,19 @@
 {
-    "name": "winteragency/acf-native-fields",
-    "description": "An interface to move native WordPress fields and options into ACF for a cleaner editor layout",
-	"type": "wordpress-plugin",
-    "license": "GPL-2.0+",
-    "authors": [
-        {
-            "name": "Winter",
-            "email": "info@winteragency.se"
-        },
-        {
-            "name": "Marcus Forsberg",
-            "email": "marcus@winter.ax"
-        }
-    ],
-    "require": {
-		"composer/installers": "^1.0"
+  "name": "winteragency/acf-native-fields",
+  "description": "An interface to move native WordPress fields and options into ACF for a cleaner editor layout",
+  "type": "wordpress-plugin",
+  "license": "GPL-2.0+",
+  "authors": [
+    {
+      "name": "Winter",
+      "email": "info@winteragency.se"
+    },
+    {
+      "name": "Marcus Forsberg",
+      "email": "marcus@winter.ax"
     }
+  ],
+  "require": {
+    "composer/installers": "^1.0"
+  }
 }
