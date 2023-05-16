@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/winteragency/acf-native-fields/compare/v1.1.3...v1.2.0) (2023-05-16)
+
+
+### Features
+
+* allow marking native fields as required, with working validation ([727eb2e](https://github.com/winteragency/acf-native-fields/commit/727eb2eba01707a1110796ed72746349c5013431))
+
 ## [1.1.3](https://github.com/winteragency/acf-native-fields/compare/v1.1.2...v1.1.3) (2023-05-15)
 
 
