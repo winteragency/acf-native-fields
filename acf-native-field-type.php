@@ -76,9 +76,63 @@ class acf_field_native extends acf_field {
     ?>
 		<div class="acf-native-field" data-native-field="<?php echo esc_attr(
     $field['native_field'],
-  ); ?>"<?php echo !empty($field['metabox_id']) ? ' data-metabox-id="' . esc_attr($field['metabox_id']) . '"' : ''; ?>>
-			<?php _e('Loading...', 'acf-native-fields'); ?>
-		</div><?php
+  ); ?>"<?php echo !empty($field['metabox_id']) ? ' data-metabox-id="' . esc_attr($field['metabox_id']) . '"' : ''; ?>><?php _e('Loading...', 'acf-native-fields'); ?>
+		</div><?php // Render a hidden input so that validation is triggered for this field if it's required
+
+    if ($field['required']) {
+    acf_hidden_input([
+      'name' => $field['name'],
+      'value' => 1,
+    ]);
+  }
+  }
+
+  /**
+   * Validate the target field.
+   * If the native field is set to be required, check that the target field has a value.
+   *
+   * @param bool   $valid Whether the value is valid.
+   * @param mixed  $value The field value.
+   * @param array  $field The field array.
+   * @param string $input The request variable name for the inbound field.
+   *
+   * @return bool|string
+   *
+   * @since 1.2.0
+   */
+  public function validate_value($valid, $value, $field, $input) {
+    if ($field['required']) {
+      $message = sprintf(
+        __('%s is required', 'acf-native-fields'),
+        $field['label'],
+      );
+
+      switch ($field['native_field']) {
+        case 'content':
+          if (empty($_POST['content'])) {
+            return $message;
+          }
+
+          break;
+        case 'excerpt':
+          if (empty($_POST['excerpt'])) {
+            return $message;
+          }
+
+          break;
+        case 'featured_image':
+          if (
+            empty($_POST['_thumbnail_id']) ||
+            intval($_POST['_thumbnail_id']) === -1
+          ) {
+            return $message;
+          }
+
+          break;
+      }
+    }
+
+    return $valid;
   }
 
   function input_admin_enqueue_scripts() {
