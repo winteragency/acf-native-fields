@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.1](https://github.com/winteragency/acf-native-fields/compare/v1.2.0...v1.2.1) (2023-05-16)
+
+
+### Bug Fixes
+
+* fix rendering issue when content editor is placed within an ACF tab ([b3466c4](https://github.com/winteragency/acf-native-fields/commit/b3466c4aa78c87f7573602d4a105ceb1dff133a0))
+
 ## [1.2.0](https://github.com/winteragency/acf-native-fields/compare/v1.1.3...v1.2.0) (2023-05-16)
 
 

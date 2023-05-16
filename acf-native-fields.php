@@ -12,7 +12,7 @@
  * Plugin Name:       ACF Native Fields
  * Plugin URI:        https://github.com/winteragency/acf-native-fields
  * Description:       An interface to move native WordPress fields and options into ACF for a cleaner editor layout
- * Version:           1.2.0
+ * Version:           1.2.1
  * Requires at least: 6.0
  * Requires PHP:      8.0
  * Author:            Winter Agency
@@ -31,7 +31,7 @@ if (!defined('ABSPATH')) {
 
 class ACF_Native_Fields {
   static $instance = false;
-  public $version = '1.2.0'; // x-release-please-version
+  public $version = '1.2.1'; // x-release-please-version
 
   function __construct() {
     // Init plugin (check requirements etc)
