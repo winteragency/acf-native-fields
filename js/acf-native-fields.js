@@ -1,5 +1,6 @@
 (function ($) {
   var ACF_Native_Fields = {
+    window: $(window),
     editor_container: null,
     native_fields: null,
 
@@ -92,6 +93,17 @@
      * ACF Native Field type: WordPress content editor
      */
     moveNativeField_content: function () {
+      // When placed in an ACF Tab, the content editor sometimes breaks when switching between tabs.
+      // This ensures it's properly re-rendered whenever the user switches tabs, by triggering the
+      // window resize event, which causes it to update.
+      ACF_Native_Fields.editor_container.on(
+        'click',
+        '.acf-tab-button',
+        function () {
+          ACF_Native_Fields.window.trigger('resize');
+        }
+      );
+
       return ACF_Native_Fields.getNativeFieldElement('#postdivrich');
     },
 
